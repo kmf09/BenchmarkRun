@@ -821,7 +821,7 @@ public class BenchmarkRun extends
 
 	public void testFFTNaiveSmallNative() throws InterruptedException {
 		Intent mIntent = new Intent();
-		mIntent.putExtra("bench", "fftnative");
+		mIntent.putExtra("bench", "fftnaive");
 		mIntent.putExtra("size", "small");
 		mIntent.putExtra("native", "");
 		setActivityIntent(mIntent);
@@ -942,6 +942,86 @@ public class BenchmarkRun extends
 	public void testClosestPairNaiveSmallNative() throws InterruptedException {
 		Intent mIntent = new Intent();
 		mIntent.putExtra("bench", "closestpairnaive");
+		mIntent.putExtra("size", "small");
+		mIntent.putExtra("native", "");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity();
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+	
+	/*******************************************************************/
+	
+	public void BitonicLarge() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bitonic");
+		mIntent.putExtra("size", "large");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity();
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+
+	public void BitnoicLargeNative() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bitonic");
+		mIntent.putExtra("size", "large");
+		mIntent.putExtra("native", "");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity();
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+
+	public void BitonicSmall() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bitonic");
+		mIntent.putExtra("size", "small");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity();
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+
+	public void BitoincSmallNative() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bitonic");
+		mIntent.putExtra("size", "small");
+		mIntent.putExtra("native", "");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity();
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+	
+	/*******************************************************************/
+	
+	public void BiDirectionalLarge() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bidirectional");
+		mIntent.putExtra("size", "large");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity();
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+
+	public void BiDirectinoalLargeNative() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bidirectional");
+		mIntent.putExtra("size", "large");
+		mIntent.putExtra("native", "");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity();
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+
+	public void BiDirectionalSmall() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bidirectinoal");
+		mIntent.putExtra("size", "small");
+		setActivityIntent(mIntent);
+		BenchmarkLauncher benchmark = getActivity(); 
+		synchronized (benchmark) { benchmark.wait(); }
+	}
+
+	public void BiDirectionalSmallNative() throws InterruptedException {
+		Intent mIntent = new Intent();
+		mIntent.putExtra("bench", "bidirectional");
 		mIntent.putExtra("size", "small");
 		mIntent.putExtra("native", "");
 		setActivityIntent(mIntent);
