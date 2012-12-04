@@ -1,5 +1,6 @@
 /*
  * Author: Ira Ray Jenkins
+ * and Katrina Fishman
  */
 package edu.fsu.cs.mobile.benchmarks.test;
 
